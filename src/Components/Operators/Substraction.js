@@ -1,20 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { UPDATEOPERATOR } from "../../Store/ActionTypes";
+import { buttonStyle } from "../../Styles/buttonStyle";
 export default function Substraction() {
   const dispatch = useDispatch();
-  let buttonStyle = {
-    height: "60px",
-    width: "60px",
-    margin: "1px",
+  let colorStyle = {
     backgroundColor: "#f26800",
     color: "white",
-    fontWeight: "bold",
-    fontSize: "21px",
   };
   return (
     <button
-      style={buttonStyle}
+      style={{ ...buttonStyle, ...colorStyle }}
       onClick={() => dispatch({ type: UPDATEOPERATOR, payload: "-" })}
     >
       {"-"}

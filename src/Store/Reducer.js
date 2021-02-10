@@ -1,18 +1,19 @@
+import arithmeticOperations from "../Services/arithmeticOperations";
 import {
-  UPDATENUMBER,
-  UPDATEOPERATOR,
   CLEARALL,
   UPDATEDISPLAY,
+  UPDATENUMBER,
+  UPDATEOPERATOR,
 } from "./ActionTypes";
-
-import arithmeticOperations from "../Services/arithmeticOperations";
 
 const initialState = { NUMBERS: [], OPERATORS: [], DISPLAY: "" };
 
 function reducer(state = initialState, { type, payload }) {
   const handleUpdateNumber = (state, payload) => {
     let { NUMBERS, OPERATORS, DISPLAY } = state;
+
     let newNumberArr = NUMBERS;
+
     newNumberArr.push(payload);
 
     let newDisplay = DISPLAY + parseInt(payload);

@@ -1,19 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { UPDATENUMBER } from "../../Store/ActionTypes";
+import { buttonStyle } from "../../Styles/buttonStyle";
 export default function Four() {
   const dispatch = useDispatch();
-  let buttonStyle = {
-    height: "60px",
-    width: "60px",
-    margin: "1px",
+  let colorStyle = {
     backgroundColor: "grey",
     color: "white",
-    fontWeight: "bold",fontSize:'21px'
   };
   return (
     <button
-      style={buttonStyle}
+      style={{ ...buttonStyle, ...colorStyle }}
       onClick={() => dispatch({ type: UPDATENUMBER, payload: 4 })}
     >
       {4}
