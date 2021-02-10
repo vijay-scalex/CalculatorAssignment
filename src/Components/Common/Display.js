@@ -10,7 +10,7 @@ export default function Display() {
         color: "#fff", 
         backgroundColor: "#000",
         height: "100px",
-        fontSize: "35px",
+      //  fontSize: "35px",
         width: "96%",
         margin: "1px",
       }}
