@@ -1,7 +1,7 @@
 import {
   UPDATENUMBER,
   UPDATEOPERATOR,
-  CLEARALL, 
+  CLEARALL,
   UPDATEDISPLAY,
 } from "./ActionTypes";
 
@@ -50,7 +50,7 @@ function reducer(state = initialState, { type, payload }) {
   };
 
   const handleUpdateDisplay = (state, payload) => {
-    let { NUMBERS, OPERATORS, DISPLAY } = state;
+    let { OPERATORS, DISPLAY } = state;
     let firstOperator = OPERATORS[0];
     let eq = DISPLAY.split(firstOperator);
 
