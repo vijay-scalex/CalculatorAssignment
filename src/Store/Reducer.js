@@ -1,3 +1,4 @@
+import Display from "../Components/Common/Display";
 import arithmeticOperations from "../Services/arithmeticOperations";
 import {
   CLEARALL,
@@ -56,6 +57,7 @@ function reducer(state = initialState, { type, payload }) {
     let eq = DISPLAY.split(firstOperator);
 
     let newDisplay = arithmeticOperations(eq[0], eq[1], firstOperator);
+
     return {
       ...state,
       NUMBERS: [],

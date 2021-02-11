@@ -13,7 +13,7 @@ export default function Substraction() {
       style={{ ...buttonStyle, ...colorStyle }}
       onClick={() => dispatch({ type: UPDATEOPERATOR, payload: "-" })}
     >
-      {"-"}
+      -
     </button>
   );
 }
